@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentinstag 💘</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff4d6d, #ff758f);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #yes {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        #no {
+            background-color: #e74c3c;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        Ey, real talk 💘<br>
+        Willst du mein Date am Valentinstag sein?
+    </h1>
+
+    <button id="yes" onclick="alert('Stark 😍 Dann ist Valentinstag offiziell gerettet!')">
+        Ja 😏
+    </button>
+
+    <button id="no">
+        Nein 🙄
+    </button>
+</div>
+
+<script>
+    const noButton = document.getElementById("no");
+
+    noButton.addEventListener("mouseover", moveButton);
+    noButton.addEventListener("click", moveButton);
+
+    function moveButton() {
+        const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+        noButton.style.left = x + "px";
+        noButton.style.top = y + "px";
+    }
+</script>
+
+</body>
+</html>
